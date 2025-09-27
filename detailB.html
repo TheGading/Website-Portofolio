@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek - Robot Omni Wheel</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0066ff;
+            --dark-color: #212529;
+            --light-color: #ffffff;
+            --gray-light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            padding-top: 80px;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        /* Project Header */
+        .project-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .project-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .back-button:hover {
+            color: #0056cc;
+        }
+        
+        /* Project Image */
+        .project-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        /* Project Details */
+        .detail-section {
+            margin-bottom: 30px;
+        }
+        
+        .detail-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .tech-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+        
+        /* Achievement Badges */
+        .achievement-badge {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 5px 10px 5px 0;
+        }
+        
+        .badge-provinsi {
+            background-color: #ffc107;
+            color: #212529;
+        }
+        
+        .badge-nasional {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        /* Project Links */
+        .project-links {
+            background-color: var(--gray-light);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code"></i> Portofolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <div class="container mt-4">
+        <a href="index.html#portfolio" class="back-button">
+            <i class="fas fa-arrow-left"></i> Kembali ke Portofolio
+        </a>
+    </div>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="project-title">Robot Omni Wheel - Kompetisi Robotika</h1>
+                    <p class="project-subtitle">Robot dengan sistem gerak omnidirectional untuk kompetisi tingkat provinsi dan nasional</p>
+                    <div class="mt-3">
+                        <span class="achievement-badge badge-provinsi">
+                            <i class="fas fa-trophy me-1"></i> Juara 1 Tingkat Provinsi
+                        </span>
+                        <span class="achievement-badge badge-nasional">
+                            <i class="fas fa-medal me-1"></i> Finalis Tingkat Nasional
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="project-image">
+                        <img src="gambar/robot.jpg" alt="Robot Omni Wheel" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="detail-section">
+                        <h3>Tentang Proyek</h3>
+                        <p>Robot Omni Wheel adalah robot dengan sistem gerak omnidirectional yang dapat bergerak ke segala arah tanpa perlu berputar terlebih dahulu. Robot ini dikembangkan khusus untuk mengikuti kompetisi robotika tingkat provinsi dan nasional dengan fokus pada kecepatan, presisi, dan kemampuan manuver di arena yang kompleks.</p>
+                        <p>Proyek ini merupakan hasil kolaborasi tim robotika sekolah yang bertujuan untuk mengembangkan teknologi robotika yang inovatif dan kompetitif. Robot ini berhasil meraih juara 2 di tingkat provinsi dan menjadi finalis di kompetisi nasional.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Fitur dan Kemampuan</h3>
+                        <ul class="feature-list">
+                            <li>Gerak omnidirectional dengan 3 roda omni</li>
+                            <li>Kontrol nirkabel menggunakan remote khusus</li>
+                            <li>Sistem navigasi otonom dengan sensor garis</li>
+                            <li>Kemampuan angkut beban hingga 2 kg</li>
+                            <li>Baterai lithium dengan daya tahan 45 menit</li>
+                            <li>Kecepatan maksimal 1.5 m/detik</li>
+                            <li>Struktur rangka yang kuat dan ringan</li>
+                            <li>Sistem kontrol PID untuk presisi gerak</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Teknologi yang Digunakan</h3>
+                        <div>
+                            <span class="tech-badge">MyRIO</span>
+                            <span class="tech-badge">Motor DC dengan Encoder</span>
+                            <span class="tech-badge">Roda Omni Directional</span>
+                            <span class="tech-badge">Sensor Infrared</span>
+                            <span class="tech-badge">Modul Bluetooth</span>
+                            <span class="tech-badge">Baterai Li-Po</span>
+                            <span class="tech-badge">Aluminium Profile</span>
+                            <span class="tech-badge">C++ Programming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="detail-section">
+                        <h3>Informasi Proyek</h3>
+                        <p><strong>Tanggal:</strong> September 2024</p>
+                        <p><strong>Kategori:</strong> Robotika, Kompetisi</p>
+                        <p><strong>Tim:</strong> 2 Anggota</p>
+                        <p><strong>Peran:</strong> Programmer & Elektronika</p>
+                        <p><strong>Kompetisi:</strong> Olimpiade Robotika Indonesia</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Pencapaian</h3>
+                        <ul class="feature-list">
+                            <li>Juara 1 Kompetisi Robotika Tingkat Provinsi</li>
+                            <li>Finalis Kompetisi Robotika Tingkat Nasional</li>
+                            <li>Inovasi sistem gerak omnidirectional</li>
+                            <li>Presentasi teknik di seminar sekolah</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Tantangan & Solusi</h3>
+                        <p><strong>Tantangan:</strong> Presisi gerak dan kestabilan robot</p>
+                        <p><strong>Solusi:</strong> Implementasi kontrol PID dan optimasi distribusi berat</p>
+                        
+                        <p><strong>Tantangan:</strong> Konsumsi daya yang tinggi</p>
+                        <p><strong>Solusi:</strong> Pemilihan komponen efisien dan manajemen daya optimal</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-links">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h4>Dokumentasi Proyek</h4>
+                        <a href="#" class="btn btn-primary me-2">
+                            <i class="fas fa-video me-2"></i>Video Demo
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">
+                            <i class="fas fa-images me-2"></i>Galeri Foto
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Dokumen Teknis</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="#" class="btn btn-outline-secondary btn-sm w-100 mb-2">
+                                    <i class="fas fa-file-pdf me-1"></i> Schematic
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-outline-secondary btn-sm w-100 mb-2">
+                                    <i class="fas fa-code me-1"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portofolio Saya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

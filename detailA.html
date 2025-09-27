@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek - DINGDOR</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0066ff;
+            --dark-color: #212529;
+            --light-color: #ffffff;
+            --gray-light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            padding-top: 80px;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        /* Project Header */
+        .project-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .project-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .back-button:hover {
+            color: #0056cc;
+        }
+        
+        /* Project Image */
+        .project-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        /* Project Details */
+        .detail-section {
+            margin-bottom: 30px;
+        }
+        
+        .detail-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .tech-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+        
+        /* Project Links */
+        .project-links {
+            background-color: var(--gray-light);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code"></i> Portofolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <div class="container mt-4">
+        <a href="index.html#portfolio" class="back-button">
+            <i class="fas fa-arrow-left"></i> Kembali ke Portofolio
+        </a>
+    </div>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="project-title">DINGDOR - Website Penjualan & Penyewaan Alat Outdoor</h1>
+                    <p class="project-subtitle">Platform e-commerce khusus untuk alat-alat camping, hiking, dan petualangan outdoor</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="project-image">
+                        <img src="gambar/dindor.png" alt="DINGDOR Website" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="detail-section">
+                        <h3>Tentang Proyek</h3>
+                        <p>DINGDOR adalah website e-commerce yang dikhususkan untuk penjualan dan penyewaan alat-alat outdoor seperti tenda, sleeping bag, carrier, dan perlengkapan camping lainnya. Website ini dirancang untuk memudahkan para pecinta alam dalam mendapatkan perlengkapan yang mereka butuhkan untuk petualangan mereka.</p>
+                        <p>Proyek ini dikembangkan sebagai solusi atas kesulitan masyarakat dalam menemukan perlengkapan outdoor yang berkualitas dengan harga terjangkau, serta opsi penyewaan untuk mereka yang tidak ingin membeli alat secara permanen.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Fitur Utama</h3>
+                        <ul class="feature-list">
+                            <li>Katalog produk dengan kategori lengkap (tenda, sleeping bag, carrier, dll)</li>
+                            <li>Sistem penyewaan dengan kalender ketersediaan</li>
+                            <li>Keranjang belanja dan checkout</li>
+                            <li>Sistem pembayaran online yang aman</li>
+                            <li>Tracking pesanan</li>
+                            <li>Review dan rating produk</li>
+                            <li>Blog tips dan panduan outdoor</li>
+                            <li>Responsive design untuk mobile dan desktop</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Teknologi yang Digunakan</h3>
+                        <div>
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Bootstrap</span>
+                            <span class="tech-badge">jQuery</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="detail-section">
+                        <h3>Informasi Proyek</h3>
+                        <p><strong>Tanggal:</strong> Januari - Maret 2024</p>
+                        <p><strong>Kategori:</strong> E-commerce, Website</p>
+                        <p><strong>Klien:</strong> DINGDOR Outdoor Gear</p>
+                        <p><strong>Peran:</strong> Full-stack Developer</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Hasil yang Dicapai</h3>
+                        <ul class="feature-list">
+                            <li>Meningkatkan penjualan produk outdoor hingga 35%</li>
+                            <li>Memperkenalkan opsi penyewaan yang sebelumnya tidak tersedia</li>
+                            <li>Meningkatkan engagement pengguna melalui blog dan konten edukatif</li>
+                            <li>Mengurangi biaya operasional dengan sistem online</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-links">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h4>Tautan Proyek</h4>
+                        <a href="https://dingdor.example.com" class="btn btn-primary me-2" target="_blank">
+                            <i class="fas fa-external-link-alt me-2"></i>Kunjungi Website
+                        </a>
+                        <a href="https://github.com/username/dingdor" class="btn btn-outline-primary" target="_blank">
+                            <i class="fab fa-github me-2"></i>Lihat Kode
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Gambar Tambahan</h4>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="gambar/dindor.png" alt="Homepage" class="img-thumbnail">
+                            </div>
+                            <div class="col-4">
+                                <img src="gambar/prof.png" alt="Produk" class="img-thumbnail">
+                            </div>
+                            <div class="col-4">
+                                <img src="gambar/ul.png" alt="Checkout" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portofolio Saya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

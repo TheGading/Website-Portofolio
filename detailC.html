@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek - Aplikasi BMI</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0066ff;
+            --dark-color: #212529;
+            --light-color: #ffffff;
+            --gray-light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            padding-top: 80px;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        /* Project Header */
+        .project-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        .project-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-subtitle {
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+        
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .back-button:hover {
+            color: #0056cc;
+        }
+        
+        /* Project Image */
+        .project-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        /* Project Details */
+        .detail-section {
+            margin-bottom: 30px;
+        }
+        
+        .detail-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .tech-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+        
+        /* BMI Categories */
+        .bmi-category {
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .bmi-underweight {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .bmi-normal {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .bmi-overweight {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .bmi-obese {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+        
+        /* Project Links */
+        .project-links {
+            background-color: var(--gray-light);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 1.8rem;
+            }
+            
+            .project-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code"></i> Portofolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back Button -->
+    <div class="container mt-4">
+        <a href="index.html#portfolio" class="back-button">
+            <i class="fas fa-arrow-left"></i> Kembali ke Portofolio
+        </a>
+    </div>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="project-title">Aplikasi Kalkulator BMI (Body Mass Index)</h1>
+                    <p class="project-subtitle">Website untuk menghitung indeks massa tubuh dengan rekomendasi kesehatan</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="project-image">
+                        <img src="gambar/kalkulator.png" alt="Aplikasi BMI" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="detail-section">
+                        <h3>Tentang Proyek</h3>
+                        <p>Aplikasi BMI (Body Mass Index) adalah website yang memungkinkan pengguna untuk menghitung indeks massa tubuh mereka dengan mudah. Aplikasi ini tidak hanya memberikan hasil perhitungan BMI, tetapi juga memberikan interpretasi hasil dan rekomendasi kesehatan berdasarkan kategori BMI.</p>
+                        <p>Proyek ini dikembangkan untuk membantu masyarakat memantau kondisi berat badan mereka dan meningkatkan kesadaran akan pentingnya menjaga berat badan ideal untuk kesehatan.</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Fitur Utama</h3>
+                        <ul class="feature-list">
+                            <li>Kalkulator BMI dengan input berat dan tinggi badan</li>
+                            <li>Kategori hasil (Underweight, Normal, Overweight, Obese)</li>
+                            <li>Interpretasi hasil dan rekomendasi kesehatan</li>
+                            <li>Riwayat perhitungan (local storage)</li>
+                            <li>Grafik perkembangan BMI over time</li>
+                            <li>Mode gelap/terang</li>
+                            <li>Responsif untuk semua perangkat</li>
+                            <li>Kalkulator berat badan ideal</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Kategori BMI</h3>
+                        <div class="bmi-category bmi-underweight">
+                            <strong>Underweight (Kekurangan berat badan):</strong> BMI kurang dari 18.5
+                        </div>
+                        <div class="bmi-category bmi-normal">
+                            <strong>Normal (Berat badan ideal):</strong> BMI 18.5 - 24.9
+                        </div>
+                        <div class="bmi-category bmi-overweight">
+                            <strong>Overweight (Kelebihan berat badan):</strong> BMI 25 - 29.9
+                        </div>
+                        <div class="bmi-category bmi-obese">
+                            <strong>Obese (Obesitas):</strong> BMI 30 atau lebih
+                        </div>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Teknologi yang Digunakan</h3>
+                        <div>
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript (ES6+)</span>
+                            <span class="tech-badge">Chart.js</span>
+                            <span class="tech-badge">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="detail-section">
+                        <h3>Informasi Proyek</h3>
+                        <p><strong>Tanggal:</strong> Maret 2024</p>
+                        <p><strong>Kategori:</strong> Aplikasi Web, Kesehatan</p>
+                        <p><strong>Status:</strong> Selesai</p>
+                        <p><strong>Peran:</strong> Full-stack Developer</p>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Fungsi dan Manfaat</h3>
+                        <ul class="feature-list">
+                            <li>Memudahkan perhitungan BMI secara akurat</li>
+                            <li>Memberikan edukasi tentang pentingnya berat badan ideal</li>
+                            <li>Membantu memantau perkembangan berat badan</li>
+                            <li>Antarmuka yang user-friendly</li>
+                            <li>Dapat diakses secara gratis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-section">
+                        <h3>Pengembangan Selanjutnya</h3>
+                        <ul class="feature-list">
+                            <li>Integrasi dengan wearable devices</li>
+                            <li>Fitur tracking progress harian</li>
+                            <li>Rekomendasi diet dan olahraga personalisasi</li>
+                            <li>Versi mobile app</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-links">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <h4>Tautan Proyek</h4>
+                        <a href="https://bmi-calculator.example.com" class="btn btn-primary me-2" target="_blank">
+                            <i class="fas fa-external-link-alt me-2"></i>Coba Aplikasi
+                        </a>
+                        <a href="https://github.com/username/bmi-calculator" class="btn btn-outline-primary" target="_blank">
+                            <i class="fab fa-github me-2"></i>Lihat Kode
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Fitur Demo</h4>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="gambar/kalkulator.png" alt="Kalkulator" class="img-thumbnail">
+                            </div>
+                            <div class="col-4">
+                                <img src="gambar/1 (1).png" alt="Hasil" class="img-thumbnail">
+                            </div>
+                            <div class="col-4">
+                                <img src="gambar/1 (2).png" alt="Grafik" class="img-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Portofolio Saya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
